@@ -3,5 +3,10 @@
 int main()
 {
     welcome();
+
+    start_game();
+
+    end_game();
+    
     return 0;
 }

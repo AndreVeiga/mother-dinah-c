@@ -3,7 +3,7 @@ void welcome(){
     system("clear");
     printf("\n\n\n");
     printf("\tSeja bem vindo ao Mother Dinah! \n");
-    printf("\nDigite seu nome: ");
+    printf("\n\tDigite seu nome: ");
     scanf("%s", name);
 
     system("clear");
