@@ -16,7 +16,6 @@ void start_game(){
     number_secret = value_secret(100);
     min_tips = value_secret(15);
     max_tips = value_secret(15);
-    int attempt = 0;
    
     while(reported_value != number_secret){
             
@@ -30,6 +29,8 @@ void start_game(){
 
         tips();
     }
+
+    end_game();
 }
 
 void tips(){
@@ -54,5 +55,5 @@ void tips(){
 
 
 void end_game(){
-
+    final_game();
 }

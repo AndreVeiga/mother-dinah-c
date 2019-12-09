@@ -15,12 +15,12 @@ void tips_one(){
 }
 
 void tips_two(){
-    number_secret < 50 ? printf("\n Dica 2: Valor e <= a 50")
+    number_secret <= 50 ? printf("\n Dica 2: Valor e <= a 50")
     : printf("\n Dica 2: Valor e > a 50");
 }
 
 void tips_three(){
-    number_secret % 3 || number_secret % 5 ? 
+    number_secret % 3 && number_secret % 5 ? 
     printf("\n Dica 3: Valor nao / por 3 nem por 5") : 
     printf("\n Dica 3: Valor e / por 3 ou 5");
 }
@@ -30,4 +30,11 @@ void tips_four(){
 
 void tips_five(){
     printf("\n Dica 5: O valor esta entre %d e %d", number_secret-min_tips, number_secret + max_tips);
+}
+
+void final_game(){
+    system("clear");
+    printf("\n Fim de game! Parabens %s !", name);
+    printf("\n Tentativas: %d", attempt);
+    printf("\n Numero secreto: %d\n", number_secret);
 }
