@@ -7,26 +7,28 @@ void execute_game(){
     screen_value();
 }
 
-int value_secret(){
+int value_secret(int limit){
     srand(time(NULL));
-    return rand() % 100;
+    return rand() % limit;
 }
 
 void start_game(){
-    number_secret = value_secret();
+    number_secret = value_secret(100);
+    min_tips = value_secret(15);
+    max_tips = value_secret(15);
     int attempt = 0;
+   
     while(reported_value != number_secret){
-        
+            
         execute_game();
 
         attempt++;
         
         if(attempt > 1 && attempt % 3 == 0){
             tips_value++;
-        }
-        
+        }        
+
         tips();
-        
     }
 }
 
@@ -36,6 +38,18 @@ void tips(){
 
     if(tips_value >= 2)
         tips_two();
+
+    if(tips_value >= 3){
+        tips_three();
+    }
+
+    if(tips_value >= 4){
+        tips_four();
+    }
+
+    if(tips_value >= 5){
+        tips_five();
+    }
 }
 
 

@@ -6,3 +6,7 @@ int reported_value = -1;
 int tips_value = 0;
 
 int number_secret;
+
+int min_tips;
+
+int max_tips;
